@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Math Game </title>
+    </head>
+    <body>
+        <script>
+            function RunThisShit() {
+                let num1, num2;
+                var min = 1;
+                var max = 99;
+                var a1 = 1;
+                var a2 = 4;
+                num1 = Math.floor(Math.random() * (max - min + 1)) + min;
+                num2 = Math.floor(Math.random() * (max - min + 1)) + min;
+                var eq = Math.floor(Math.random() * (a2 - a1 + 1)) + a1;
+                if (eq == 1) {
+                    eq = '+';
+                }
+                if (eq == 2) {
+                    eq = '*';
+                }
+                if (eq == 3) {
+                    eq = '-';
+                }
+                if (eq == 4) {
+                    eq = '/';
+                }
+                function Wtf() {
+                    var question = prompt(num1 + " " + eq + " " + num2 + " ?");
+                    if (question == eval(parseInt(num1) + eq + parseInt(num2))) {
+                        alert("Correct answer, try this next one");
+                        RunShit().onload();
+                    }
+                    if (question > num1 + num2 || question < num1 + num2) {
+                        alert("Incorrect answer, Game over");
+                        document.write(`<b>Owner/Developer : <a href="https://free.facebook.com/photo.php?fbid=694684837866298&id=100019743631108&set=a.100333967301391&refid=17" target="_blank">Aldrin Caballero <a></b>
+<center><br><img alt="Aldrin Picture" width="300px" height="auto" src="https://free.facebook.com/photo.php?fbid=694684837866298&id=100019743631108&set=a.100333967301391&refid=17"></center>
+`);
+                    }
+                    if (question == null) {
+                        confirm("Are you sure you want to quit this game ?");
+                    }
+                }
+                ;Wtf();
+            }
+            ;RunThisShit();
+        </script>
+    </body>
+</html>
